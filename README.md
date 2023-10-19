@@ -17,7 +17,7 @@ To get a local copy up and running, follow these simple steps:
 1. Clone the repository to your local machine.
 2. Navigate to the project directory.
 3. Compile the program using `gcc -Wall -Werror -Wextra -pedantic -std=c89 *.c -o monty`.
-4. Run the program with a Monty byte codes file: `./monty bytecodes/00.m`.
+4. Run the program with a Monty byte codes file: `./monty test/00.m`.
 
 ## Built With 🛠️
 
@@ -43,6 +43,5 @@ Give a ⭐️ if this project helped you!
 
 ![Monty Interpreter](https://miro.medium.com/max/1200/1*OohqW5DGh9CQS4hLY5FXzA.png)
 
-Please note that the image is for illustrative purposes and the actual image should be chosen based on the project's requirements and branding guidelines.)
 
-This README was generated with ❤️ by Ewedairo Israel.
+This README was created with ❤️ by Ewedairo Israel.
