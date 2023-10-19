@@ -72,6 +72,16 @@ void execute_opcode(char *opcode, char *value,
 		add(stack, line_number);
 	else if (strcmp(opcode, "nop") == 0)
 		nop(stack, line_number);
+	else if (strcmp(opcode, "add") == 0)
+		add(stack, line_number);
+	else if (strcmp(opcode, "nop") == 0)
+		nop(stack, line_number);
+	else if (strcmp(opcode, "sub") == 0)
+		sub(stack, line_number);
+	else if (strcmp(opcode, "divide") == 0)
+		divide(stack, line_number);
+	else if (strcmp(opcode, "mul") == 0)
+		mul(stack, line_number);
 
 	else
 	{
