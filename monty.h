@@ -37,7 +37,8 @@ typedef struct instruction_s
 /* Function Prototypes */
 void push(stack_t **stack, unsigned int line_number, char *value);
 void pall(stack_t **stack, unsigned int line_number);
-void execute_opcode(char *opcode, char *value, stack_t **stack, unsigned int line_number);
+void execute_opcode(char *opcode, char *value,
+		stack_t **stack, unsigned int line_number);
 void parse_line(char *line, char **opcode, char **value);
 void read_line(FILE *file, char **line, size_t *len, ssize_t *read);
 void open_file(char *filename, FILE **file);
@@ -53,4 +54,5 @@ void mod(stack_t **stack, unsigned int line_number);
 void pchar(stack_t **stack, unsigned int line_number);
 void pstr(stack_t **stack, unsigned int line_number);
 void rotl(stack_t **stack, unsigned int line_number);
+void rotr(stack_t **stack, unsigned int line_number);
 #endif /* MONTY_H */
