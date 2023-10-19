@@ -72,10 +72,6 @@ void execute_opcode(char *opcode, char *value,
 		add(stack, line_number);
 	else if (strcmp(opcode, "nop") == 0)
 		nop(stack, line_number);
-	else if (strcmp(opcode, "add") == 0)
-		add(stack, line_number);
-	else if (strcmp(opcode, "nop") == 0)
-		nop(stack, line_number);
 	else if (strcmp(opcode, "sub") == 0)
 		sub(stack, line_number);
 	else if (strcmp(opcode, "divide") == 0)
@@ -99,11 +95,11 @@ void execute_opcode(char *opcode, char *value,
 		exit(EXIT_FAILURE);
 	}
 }
-
 /**
  * main - Entry point
  * @argc: Argument count
  * @argv: Argument vector
+ *
  * Return: EXIT_SUCCESS on success, EXIT_FAILURE on failure
  */
 int main(int argc, char *argv[])
@@ -134,6 +130,7 @@ int main(int argc, char *argv[])
 	}
 
 	free(line);
+	free_stack(&stack);
 	fclose(file);
 
 	return (EXIT_SUCCESS);

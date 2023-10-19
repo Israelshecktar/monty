@@ -4,8 +4,9 @@
 /**
  * push - pushes an element to the stack
  * @stack: double pointer to the top of the stack
- * @line_number: value of the new element
- * @value: number of char
+ * @line_number: line number
+ * @value: value to push
+ *
  * Return: nothing
  */
 void push(stack_t **stack, unsigned int line_number, char *value)
@@ -13,13 +14,13 @@ void push(stack_t **stack, unsigned int line_number, char *value)
 	stack_t *new_node;
 	int num;
 
-	num = atoi(value);
-	if (num == 0 && *value != '0')
+	if (!is_number(value))
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
+	num = atoi(value);
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
 	{
@@ -36,7 +37,6 @@ void push(stack_t **stack, unsigned int line_number, char *value)
 
 	*stack = new_node;
 }
-
 /**
  * pall - prints all the values on the stack, starting from the top
  * @stack: double pointer to the top of the stack
