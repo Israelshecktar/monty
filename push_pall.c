@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "monty.h"
-
+#include "string.h"
 /**
  * push - Pushes an element to the stack.
  * @stack: A pointer to the stack.
@@ -9,21 +9,34 @@
  */
 void push(stack_t **stack, unsigned int line_number)
 {
+	char *arg;
+	int value;
 	stack_t *new_node;
-	if (stack == NULL || *stack == NULL)
+
+	if (stack == NULL)
+	{
+		fprintf(stderr, "L%u: Error: stack not found\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+
+	arg = strtok(NULL, " \t\n");
+	if (arg == NULL || !is_valid_int(arg))
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
+	value = atoi(arg);
+
 	new_node = malloc(sizeof(stack_t));
+
 	if (new_node == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
 
-	new_node->n = (*stack)->n;
+	new_node->n = value;
 	new_node->prev = NULL;
 	new_node->next = *stack;
 
@@ -31,6 +44,7 @@ void push(stack_t **stack, unsigned int line_number)
 		(*stack)->prev = new_node;
 	*stack = new_node;
 }
+
 /**
  * pall - Prints all the values on the stack.
  * @stack: A pointer to the stack.
