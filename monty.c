@@ -62,6 +62,8 @@ void execute_opcode(char *opcode, char *value,
 		push(stack, line_number, value);
 	else if (strcmp(opcode, "pall") == 0)
 		pall(stack, line_number);
+	else if (strcmp(opcode, "pint") == 0)
+        pint(stack, line_number);
 	else
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n",
