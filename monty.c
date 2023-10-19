@@ -86,6 +86,8 @@ void execute_opcode(char *opcode, char *value,
 		mod(stack, line_number);
 	else if (strcmp(opcode, "pchar") == 0)
 		pchar(stack, line_number);
+	else if (strcmp(opcode, "pstr") == 0)
+		pstr(stack, line_number);
 	else
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n",
