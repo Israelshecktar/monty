@@ -9,9 +9,9 @@
  */
 void push(stack_t **stack, unsigned int line_number)
 {
-	char *arg;
 	int value;
 	stack_t *new_node;
+	char *arg;
 
 	if (stack == NULL)
 	{
@@ -27,9 +27,7 @@ void push(stack_t **stack, unsigned int line_number)
 	}
 
 	value = atoi(arg);
-
 	new_node = malloc(sizeof(stack_t));
-
 	if (new_node == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
