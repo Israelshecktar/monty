@@ -1,5 +1,12 @@
 #ifndef MONTY_H
 #define MONTY_H
+#include <string.h>
+#include <stdio.h>
+#include <sys/types.h>
+#include <stdlib.h>
+#include "monty.h"
+#include <string.h>
+#include <sys/types.h>
 
 /* Data Structures */
 
@@ -28,9 +35,8 @@ typedef struct instruction_s
 } instruction_t;
 
 /* Function Prototypes */
-
-void push(stack_t **stack, unsigned int line_number);
+void push(stack_t **stack, unsigned int line_number, char *value);
 void pall(stack_t **stack, unsigned int line_number);
-int is_valid_int(char *str);
+
 
 #endif /* MONTY_H */
