@@ -43,4 +43,5 @@ void read_line(FILE *file, char **line, size_t *len, ssize_t *read);
 void open_file(char *filename, FILE **file);
 void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
+void swap(stack_t **stack, unsigned int line_number);
 #endif /* MONTY_H */
