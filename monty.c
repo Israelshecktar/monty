@@ -74,7 +74,7 @@ void execute_opcode(char *opcode, char *value,
 		nop(stack, line_number);
 	else if (strcmp(opcode, "sub") == 0)
 		sub(stack, line_number);
-	else if (strcmp(opcode, "divide") == 0)
+	else if (strcmp(opcode, "div") == 0)
 		divide(stack, line_number);
 	else if (strcmp(opcode, "mul") == 0)
 		mul(stack, line_number);
