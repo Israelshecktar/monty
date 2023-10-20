@@ -35,8 +35,8 @@ typedef struct instruction_s
 } instruction_t;
 
 /* Function Prototypes */
-void push(stack_t **stack, unsigned int line_number, char *value);
-void pall(stack_t **stack, unsigned int line_number);
+void sh_push(stack_t **stack, unsigned int line_number, char *value);
+void sh_pall(stack_t **stack, unsigned int line_number);
 void free_stack(stack_t **stack);
 int is_number(char *str);
 void execute_opcode(char *opcode, char *value,
@@ -44,19 +44,19 @@ void execute_opcode(char *opcode, char *value,
 void parse_line(char *line, char **opcode, char **value);
 void read_line(FILE *file, char **line, size_t *len, ssize_t *read);
 void open_file(char *filename, FILE **file);
-void pint(stack_t **stack, unsigned int line_number);
-void pop(stack_t **stack, unsigned int line_number);
-void swap(stack_t **stack, unsigned int line_number);
-void nop(stack_t **stack, unsigned int line_number);
-void add(stack_t **stack, unsigned int line_number);
-void sub(stack_t **stack, unsigned int line_number);
+void sh_pint(stack_t **stack, unsigned int line_number);
+void sh_pop(stack_t **stack, unsigned int line_number);
+void sh_swap(stack_t **stack, unsigned int line_number);
+void sh_nop(stack_t **stack, unsigned int line_number);
+void sh_add(stack_t **stack, unsigned int line_number);
+void sh_sub(stack_t **stack, unsigned int line_number);
 void divide(stack_t **stack, unsigned int line_number);
-void mul(stack_t **stack, unsigned int line_number);
-void mod(stack_t **stack, unsigned int line_number);
-void pchar(stack_t **stack, unsigned int line_number);
-void pstr(stack_t **stack, unsigned int line_number);
-void rotl(stack_t **stack, unsigned int line_number);
-void rotr(stack_t **stack, unsigned int line_number);
+void sh_mul(stack_t **stack, unsigned int line_number);
+void sh_mod(stack_t **stack, unsigned int line_number);
+void sh_pchar(stack_t **stack, unsigned int line_number);
+void sh_pstr(stack_t **stack, unsigned int line_number);
+void sh_rotl(stack_t **stack, unsigned int line_number);
+void sh_rotr(stack_t **stack, unsigned int line_number);
 
 
 #endif /* MONTY_H */

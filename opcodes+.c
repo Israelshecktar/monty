@@ -1,12 +1,12 @@
 #include "monty.h"
 #include <stdlib.h>
 /**
- * swap - swaps the top two elements of the stack
+ * sh_swap - swaps the top two elements of the stack
  * @stack: double pointer to the top of the stack
  * @line_number: line number
  * Return: nothing
  */
-void swap(stack_t **stack, unsigned int line_number)
+void sh_swap(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp;
 
@@ -26,12 +26,12 @@ void swap(stack_t **stack, unsigned int line_number)
 	*stack = temp;
 }
 /**
- * add - adds the top two elements of the stack
+ * sh_add - adds the top two elements of the stack
  * @stack: double pointer to the top of the stack
  * @line_number: line number
  * Return: nothing
  */
-void add(stack_t **stack, unsigned int line_number)
+void sh_add(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp;
 
@@ -48,23 +48,23 @@ void add(stack_t **stack, unsigned int line_number)
 	free(temp);
 }
 /**
- * nop - doesn't do anything
+ * sh_nop - doesn't do anything
  * @stack: double pointer to the top of the stack
  * @line_number: line number
  * Return: nothing
  */
-void nop(stack_t **stack, unsigned int line_number)
+void sh_nop(stack_t **stack, unsigned int line_number)
 {
 	(void)stack;
 	(void)line_number;
 }
 /**
- * sub - subtracts the top element of the stack from the second top element
+ * sh_sub - subtracts the top element of the stack from the second top element
  * @stack: double pointer to the top of the stack
  * @line_number: line number
  * Return: nothing
  */
-void sub(stack_t **stack, unsigned int line_number)
+void sh_sub(stack_t **stack, unsigned int line_number)
 {
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
@@ -73,7 +73,7 @@ void sub(stack_t **stack, unsigned int line_number)
 	}
 
 	(*stack)->next->n -= (*stack)->n;
-	pop(stack, line_number);
+	sh_pop(stack, line_number);
 }
 
 /**
@@ -97,5 +97,5 @@ void divide(stack_t **stack, unsigned int line_number)
 	}
 
 	(*stack)->next->n /= (*stack)->n;
-	pop(stack, line_number);
+	sh_pop(stack, line_number);
 }

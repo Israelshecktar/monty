@@ -1,11 +1,11 @@
 #include "monty.h"
 /**
- * mul - multiplies the second top element of the stack with the top element
+ * sh_mul - multiplies the second top element of the stack with the top element
  * @stack: double pointer to the top of the stack
  * @line_number: line number
  * Return: nothing
  */
-void mul(stack_t **stack, unsigned int line_number)
+void sh_mul(stack_t **stack, unsigned int line_number)
 {
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
@@ -14,15 +14,15 @@ void mul(stack_t **stack, unsigned int line_number)
 	}
 
 	(*stack)->next->n *= (*stack)->n;
-	pop(stack, line_number);
+	sh_pop(stack, line_number);
 }
 /**
- * mod - computes the rest of the division of the second top element
+ * sh_mod - computes the rest of the division of the second top element
  * @stack: double pointer to the top of the stack
  * @line_number: line number
  * Return: nothing
  */
-void mod(stack_t **stack, unsigned int line_number)
+void sh_mod(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp;
 
@@ -45,12 +45,12 @@ void mod(stack_t **stack, unsigned int line_number)
 	free(temp);
 }
 /**
- * pchar - prints the char at the top of the stack
+ * sh_pchar - prints the char at the top of the stack
  * @stack: double pointer to the top of the stack
  * @line_number: line number
  * Return: nothing
  */
-void pchar(stack_t **stack, unsigned int line_number)
+void sh_pchar(stack_t **stack, unsigned int line_number)
 {
 	if (*stack == NULL)
 	{
@@ -67,12 +67,12 @@ void pchar(stack_t **stack, unsigned int line_number)
 	printf("%c\n", (*stack)->n);
 }
 /**
- * pstr - prints the string starting at the top of the stack
+ * sh_pstr - prints the string starting at the top of the stack
  * @stack: double pointer to the top of the stack
  * @line_number: line number
  * Return: nothing
  */
-void pstr(stack_t **stack, unsigned int line_number)
+void sh_pstr(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp = *stack;
 
@@ -87,12 +87,12 @@ void pstr(stack_t **stack, unsigned int line_number)
 	printf("\n");
 }
 /**
- * rotl - rotates the stack to the top
+ * sh_rotl - rotates the stack to the top
  * @stack: double pointer to the top of the stack
  * @line_number: line number
  * Return: nothing
  */
-void rotl(stack_t **stack, unsigned int line_number)
+void sh_rotl(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp, *last;
 	(void)line_number;

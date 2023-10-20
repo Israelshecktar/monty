@@ -59,35 +59,35 @@ void execute_opcode(char *opcode, char *value,
 		stack_t **stack, unsigned int line_number)
 {
 	if (strcmp(opcode, "push") == 0)
-		push(stack, line_number, value);
+		sh_push(stack, line_number, value);
 	else if (strcmp(opcode, "pall") == 0)
-		pall(stack, line_number);
+		sh_pall(stack, line_number);
 	else if (strcmp(opcode, "pint") == 0)
-		pint(stack, line_number);
+		sh_pint(stack, line_number);
 	else if (strcmp(opcode, "pop") == 0)
-		pop(stack, line_number);
+		sh_pop(stack, line_number);
 	else if (strcmp(opcode, "swap") == 0)
-		swap(stack, line_number);
+		sh_swap(stack, line_number);
 	else if (strcmp(opcode, "add") == 0)
-		add(stack, line_number);
+		sh_add(stack, line_number);
 	else if (strcmp(opcode, "nop") == 0)
-		nop(stack, line_number);
+		sh_nop(stack, line_number);
 	else if (strcmp(opcode, "sub") == 0)
-		sub(stack, line_number);
+		sh_sub(stack, line_number);
 	else if (strcmp(opcode, "div") == 0)
 		divide(stack, line_number);
 	else if (strcmp(opcode, "mul") == 0)
-		mul(stack, line_number);
+		sh_mul(stack, line_number);
 	else if (strcmp(opcode, "mod") == 0)
-		mod(stack, line_number);
+		sh_mod(stack, line_number);
 	else if (strcmp(opcode, "pchar") == 0)
-		pchar(stack, line_number);
+		sh_pchar(stack, line_number);
 	else if (strcmp(opcode, "pstr") == 0)
-		pstr(stack, line_number);
+		sh_pstr(stack, line_number);
 	else if (strcmp(opcode, "rotl") == 0)
-		rotl(stack, line_number);
+		sh_rotl(stack, line_number);
 	else if (strcmp(opcode, "rotr") == 0)
-		rotr(stack, line_number);
+		sh_rotr(stack, line_number);
 	else
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n",

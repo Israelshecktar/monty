@@ -2,14 +2,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * push - pushes an element to the stack
+ * sh_push - pushes an element to the stack
  * @stack: double pointer to the top of the stack
  * @line_number: line number
  * @value: value to push
  *
  * Return: nothing
  */
-void push(stack_t **stack, unsigned int line_number, char *value)
+void sh_push(stack_t **stack, unsigned int line_number, char *value)
 {
 	stack_t *new_node;
 	int num;
@@ -38,12 +38,12 @@ void push(stack_t **stack, unsigned int line_number, char *value)
 	*stack = new_node;
 }
 /**
- * pall - prints all the values on the stack, starting from the top
+ * sh_pall - prints all the values on the stack, starting from the top
  * @stack: double pointer to the top of the stack
  * @line_number: value of the new element
  * Return: nothing
  */
-void pall(stack_t **stack, unsigned int line_number)
+void sh_pall(stack_t **stack, unsigned int line_number)
 {
 	stack_t *current = *stack;
 	(void)line_number;
@@ -55,12 +55,12 @@ void pall(stack_t **stack, unsigned int line_number)
 	}
 }
 /**
- * pint - prints the value at the top of the stack
+ * sh_pint - prints the value at the top of the stack
  * @stack: double pointer to the top of the stack
  * @line_number: line number
  * Return: nothing
  */
-void pint(stack_t **stack, unsigned int line_number)
+void sh_pint(stack_t **stack, unsigned int line_number)
 {
 	if (*stack == NULL)
 	{
@@ -71,12 +71,12 @@ void pint(stack_t **stack, unsigned int line_number)
 	printf("%d\n", (*stack)->n);
 }
 /**
- * pop - removes the top element of the stack
+ * sh_pop - removes the top element of the stack
  * @stack: double pointer to the top of the stack
  * @line_number: line number
  * Return: nothing
  */
-void pop(stack_t **stack, unsigned int line_number)
+void sh_pop(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp;
 
