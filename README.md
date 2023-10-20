@@ -18,7 +18,7 @@ After compiling the program with the provided command, you can run the Monty Lan
 
 Replace `<file_path>` with the path to the file that contains the Monty bytecodes. For example, you could use:
 
-`./monty bytecodes/00.m`
+`./monty test/00.m`
 
 This will instruct the interpreter to read and execute the bytecodes from the '00.m' file in the 'bytecodes' directory
 ```c
