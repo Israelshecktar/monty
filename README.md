@@ -10,6 +10,38 @@ This project was carried out by Ewedairo Israel, a student at Alx Africa, under 
 - The program handles various opcodes, including `push`, `pall`, `pint`, `pop`, `swap`, `add`, `nop`, `sub`, `div`, `mul`, `mod`, `pchar`, `pstr`, `rotl`, `rotr`, `stack`, and `queue`.
 - The program can operate in either stack (LIFO) or queue (FIFO) mode, depending on the opcode.
 
+## Usage 📚
+
+After compiling the program with the provided command, you can run the Monty Language Interpreter using the following command:
+
+`./monty <file_path>`
+
+Replace `<file_path>` with the path to the file that contains the Monty bytecodes. For example, you could use:
+
+`./monty bytecodes/00.m`
+
+This will instruct the interpreter to read and execute the bytecodes from the '00.m' file in the 'bytecodes' directory
+`
+shecktar@SHECKTAR-PC:~/monty$ cat test/07.m
+push 1
+push 2
+push 3
+pall
+pop
+pall
+pop
+pall
+pop
+pall
+shecktar@SHECKTAR-PC:~/monty$ ./monty test/07.m
+3
+2
+1
+2
+1
+1
+shecktar@SHECKTAR-PC:~/monty$`
+
 ## Getting Started 🏁
 
 To get a local copy up and running, follow these simple steps:
