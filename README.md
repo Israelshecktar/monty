@@ -6,7 +6,7 @@ This project was carried out by Ewedairo Israel, a student at Alx Africa, under 
 
 ## Features 🎈
 
-- The Monty program is executed with the following command: `monty file`, where `file` is the path to the file containing Monty byte code.
+- The Monty program is executed with the following command: monty file, where `file` is the path to the file containing Monty byte code.
 - The program handles various opcodes, including `push`, `pall`, `pint`, `pop`, `swap`, `add`, `nop`, `sub`, `div`, `mul`, `mod`, `pchar`, `pstr`, `rotl`, `rotr`, `stack`, and `queue`.
 - The program can operate in either stack (LIFO) or queue (FIFO) mode, depending on the opcode.
 
